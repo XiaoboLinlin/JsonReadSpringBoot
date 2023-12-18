@@ -1,6 +1,7 @@
 package com.json_springboot_read.model.user_comb;
 
 import com.json_springboot_read.model.user.Address;
+import com.json_springboot_read.model.user.AddressNew;
 import com.json_springboot_read.model.user.Company;
 import com.json_springboot_read.model.user.User;
 import com.json_springboot_read.model.user_app.userAppend;
@@ -19,7 +20,7 @@ public class UserComb {
     private String name;
 
     @Embedded
-    private Address address;
+    private AddressNew address;
     @Embedded
     private Company company;
 
@@ -31,7 +32,8 @@ public class UserComb {
     public UserComb(User user, userAppend userApp) {
         this.id = user.getId();
         this.name = user.getName();
-        this.address = user.getAddress();
+        this.address = new AddressNew();
+        this.address.setGeo(user.getAddress().getGeo());
         this.company = user.getCompany();
         this.title = userApp.getTitle();
         this.body = userApp.getBody();

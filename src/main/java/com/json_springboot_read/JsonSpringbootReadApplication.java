@@ -20,6 +20,6 @@ public class JsonSpringbootReadApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(JsonSpringbootReadApplication.class, args);
-        System.out.println("hello");
+        System.out.println("hello1");
     }
 }

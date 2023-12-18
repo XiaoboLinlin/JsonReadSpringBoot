@@ -28,7 +28,7 @@ public class CommandLineRunnerConfig {
                 TypeReference<List<User>> typeRefUser = new TypeReference<>() {
                 };
                 List<User> users = mapper.readValue(inputStream1, typeRefUser);
-
+                System.out.println("hello");
                 TypeReference<List<userAppend>> typeRefUserAppend = new TypeReference<>() {
                 };
                 List<userAppend> usersAppend = mapper.readValue(inputStream2, typeRefUserAppend);
