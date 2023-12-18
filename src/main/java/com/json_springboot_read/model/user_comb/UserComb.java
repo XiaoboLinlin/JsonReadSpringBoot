@@ -28,7 +28,6 @@ public class UserComb {
     private String body;
 
     // Constructor to create UserAppend from User
-    // Constructor to create UserAppend from User
     public UserComb(User user, userAppend userApp) {
         this.id = user.getId();
         this.name = user.getName();
